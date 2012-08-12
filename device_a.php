@@ -1,6 +1,5 @@
 ﻿<?php
 require ("./inc/head.php");
-require ("./inc/common.php");
 
 $query = "SELECT * FROM huanjinginfo where id=1";
 $zhenshi = getAll($query);

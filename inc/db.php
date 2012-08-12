@@ -8,7 +8,7 @@
 		global $g_mysql;
 		$aa = DBHOST;
 		
-		$g_mysql = mysql_connect(DBHOST, DBUSER, DBPWD, true);
+		$g_mysql = mssql_connect(DBHOST, DBUSER, DBPWD, true);
 		if (!$g_mysql) {
 			die('Could not connect: ' . mysql_error());
 		}
@@ -22,7 +22,7 @@
 	{
 		global $g_smysql;
 
-		$g_smysql = mysql_connect(SDBHOST,SDBUSER,SDBPWD, true);
+		$g_smysql = mssql_connect(SDBHOST,SDBUSER,SDBPWD, true);
 		mysql_select_db(SDBNAME, $g_smysql);
 		mysql_query("set names 'utf8'",$g_smysql);
 	}
@@ -31,12 +31,10 @@
 	{
 		global $g_tbmysql;
 
-		$g_tbmysql = mysql_connect(TBDBHOST,TBDBUSER,TBDBPWD, true);
+		$g_tbmysql = mssql_connect(TBDBHOST,TBDBUSER,TBDBPWD, true);
 		mysql_select_db(TBDBNAME, $g_tbmysql);
 		mysql_query("set names 'utf8'",$g_tbmysql);
 	}
 	
 	db_connect();
-	dbs_connect();
-	dbtb_connect()
 ?>

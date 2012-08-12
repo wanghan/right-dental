@@ -205,7 +205,7 @@ body,td,th {
         </table></td>
     </tr>
   </table>
-   <?php require 'footer.php';?>
+   <?php require "footer.php";?>
 </div>
 </body>
 </html>

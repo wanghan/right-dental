@@ -8,7 +8,7 @@ if(isset($_REQUEST["page"]) && !empty($_REQUEST["page"])){
 	
 	//分页列表部分
 	$query = "SELECT COUNT(*) FROM newslist where status<>2 ";
-	$res = mssql_query($query, $g_mysql) or syswarn("对不起","系统错误，请联系管理员",mysql_error().":".$query);
+	$res = mysql_query($query, $g_mysql) or syswarn("对不起","系统错误，请联系管理员",mysql_error().":".$query);
 	if ($row = mysql_fetch_array($res))
 	{
 		$g_rows = $row[0];
