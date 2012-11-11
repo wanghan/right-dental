@@ -1,50 +1,50 @@
 ﻿<?php
 require ("./inc/head.php");
 
-mysql_query("SET NAMES 'utf8'");
+// mysql_query("SET NAMES 'utf8'");
 
-define ("PAGE_NUM", 5);
-$page = $_REQUEST['page'];
-
-
-$act = $_REQUEST['act'];
-//$title = $_REQUEST['title'];
-//$ask = $_REQUEST['ask'];
-
-if($act=="add"){
-
-	$title=$_REQUEST[title];
-	$ask=$_REQUEST[ask];
-	$answer=$_REQUEST[answer];
-
-	$query="insert into questionlist set ";
-	$query .= "title = '" .mysql_escape_string($title)."', ";
-	$query .= "ask = '" .mysql_escape_string($ask)."', ";
-	$query .= "answer = '', ";
-	$query .= "status = '" .mysql_escape_string("1")."', ";
-	$query .= "input_time = now() ";
-	$result = mysql_query($query,$g_mysql);
-	alert_location("成功提交问题!","admin.php");
+// define ("PAGE_NUM", 5);
+// $page = $_REQUEST['page'];
 
 
-}
+// $act = $_REQUEST['act'];
+// //$title = $_REQUEST['title'];
+// //$ask = $_REQUEST['ask'];
 
-//分页列表部分
-$query = "SELECT COUNT(*) FROM questionlist where status<>2 ";
+// if($act=="add"){
 
-$res = mysql_query($query, $g_mysql) or syswarn("对不起","系统错误，请联系管理员",mysql_error().":".$query);
-if ($row = mysql_fetch_array($res))
-{
-	$g_rows = $row[0];
-}
+// 	$title=$_REQUEST[title];
+// 	$ask=$_REQUEST[ask];
+// 	$answer=$_REQUEST[answer];
 
-if ($page <= 0)
-	$r_start = 0;
-else
-	$r_start = ($page-1)*PAGE_NUM;
+// 	$query="insert into questionlist set ";
+// 	$query .= "title = '" .mysql_escape_string($title)."', ";
+// 	$query .= "ask = '" .mysql_escape_string($ask)."', ";
+// 	$query .= "answer = '', ";
+// 	$query .= "status = '" .mysql_escape_string("1")."', ";
+// 	$query .= "input_time = now() ";
+// 	$result = mysql_query($query,$g_mysql);
+// 	alert_location("成功提交问题!","admin.php");
 
-$query = "SELECT * FROM questionlist where status<>2 ORDER BY input_time DESC LIMIT ".$r_start.", ".PAGE_NUM;
-$questionlist = getAll($query);
+
+// }
+
+// //分页列表部分
+// $query = "SELECT COUNT(*) FROM questionlist where status<>2 ";
+
+// $res = mysql_query($query, $g_mysql) or syswarn("对不起","系统错误，请联系管理员",mysql_error().":".$query);
+// if ($row = mysql_fetch_array($res))
+// {
+// 	$g_rows = $row[0];
+// }
+
+// if ($page <= 0)
+// 	$r_start = 0;
+// else
+// 	$r_start = ($page-1)*PAGE_NUM;
+
+// $query = "SELECT * FROM questionlist where status<>2 ORDER BY input_time DESC LIMIT ".$r_start.", ".PAGE_NUM;
+// $questionlist = getAll($query);
 
 
 ?>

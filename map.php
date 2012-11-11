@@ -34,8 +34,8 @@ body,td,th {
 </style>
 </head>
 
-<body align="center">
-<div style="margin:0px auto; width:1004">
+<body>
+<div align="center" style="margin:0px auto; width:1004">
   <table width="1004" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td width="220" valign="top"><table id="__01" width="220" height="689" border="0" cellpadding="0" cellspacing="0">
