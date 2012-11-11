@@ -1,34 +1,34 @@
 ﻿<?php
 require ("./inc/head.php");
 
-define ("PAGE_NUM", 6);
-$page = $_REQUEST['page'];
-$id = $_REQUEST['id'];
-$groupid = $_REQUEST['groupid'];
+// define ("PAGE_NUM", 6);
+// $page = $_REQUEST['page'];
+// $id = $_REQUEST['id'];
+// $groupid = $_REQUEST['groupid'];
 
-if($id==""){
-	$sql = "SELECT * FROM shebeilist where status<>2 and groupid=$groupid ORDER BY input_time DESC limit 0,1";
-}else{
-	$sql = "SELECT * FROM shebeilist where status<>2 and id=$id";
-}
-$shebeidetail = getAll($sql);
+// if($id==""){
+// 	$sql = "SELECT * FROM shebeilist where status<>2 and groupid=$groupid ORDER BY input_time DESC limit 0,1";
+// }else{
+// 	$sql = "SELECT * FROM shebeilist where status<>2 and id=$id";
+// }
+// $shebeidetail = getAll($sql);
 
-//分页列表部分
-$query = "SELECT COUNT(*) FROM shebeilist where status<>2 and groupid=$groupid";
-$res = mysql_query($query, $g_mysql) or syswarn("对不起","系统错误，请联系管理员",mysql_error().":".$query);
-if ($row = mysql_fetch_array($res))
-{
-	$g_rows = $row[0];
-}
+// //分页列表部分
+// $query = "SELECT COUNT(*) FROM shebeilist where status<>2 and groupid=$groupid";
+// $res = mysql_query($query, $g_mysql) or syswarn("对不起","系统错误，请联系管理员",mysql_error().":".$query);
+// if ($row = mysql_fetch_array($res))
+// {
+// 	$g_rows = $row[0];
+// }
 
-if ($page <= 0)
-	$r_start = 0;
-else
-	$r_start = ($page-1)*PAGE_NUM;
+// if ($page <= 0)
+// 	$r_start = 0;
+// else
+// 	$r_start = ($page-1)*PAGE_NUM;
 
-$query = "SELECT * FROM shebeilist where status<>2 and groupid=$groupid ORDER BY input_time DESC ";
-//echo $query;
-$shebeilist = getAll($query);
+// $query = "SELECT * FROM shebeilist where status<>2 and groupid=$groupid ORDER BY input_time DESC ";
+// //echo $query;
+// $shebeilist = getAll($query);
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

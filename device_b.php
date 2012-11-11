@@ -1,14 +1,14 @@
 ﻿<?php
 require ("./inc/head.php");
 
-$query = "SELECT * FROM huanjinginfo where id=4";
-$zhenshi = getAll($query);
+// $query = "SELECT * FROM huanjinginfo where id=4";
+// $zhenshi = getAll($query);
 
-$query = "SELECT * FROM huanjinginfo where id=5";
-$houzhenshi = getAll($query);
+// $query = "SELECT * FROM huanjinginfo where id=5";
+// $houzhenshi = getAll($query);
 
-$query = "SELECT * FROM huanjinginfo where id=6";
-$peixun = getAll($query);
+// $query = "SELECT * FROM huanjinginfo where id=6";
+// $peixun = getAll($query);
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

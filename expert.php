@@ -1,26 +1,26 @@
 ﻿<?php
 require ("./inc/head.php");
 
-define ("PAGE_NUM", 8);
-if(isset($_REQUEST["page"]) && !empty($_REQUEST["page"])){
-	$page = $_REQUEST['page'];
+// define ("PAGE_NUM", 8);
+// if(isset($_REQUEST["page"]) && !empty($_REQUEST["page"])){
+// 	$page = $_REQUEST['page'];
 	
-	//分页列表部分
-	$query = "SELECT COUNT(*) FROM tuanduilist where status<>2 ";
-	$res = mysql_query($query, $g_mysql) or syswarn("对不起","系统错误，请联系管理员",mysql_error().":".$query);
-	if ($row = mysql_fetch_array($res))
-	{
-		$g_rows = $row[0];
-	}
+// 	//分页列表部分
+// 	$query = "SELECT COUNT(*) FROM tuanduilist where status<>2 ";
+// 	$res = mysql_query($query, $g_mysql) or syswarn("对不起","系统错误，请联系管理员",mysql_error().":".$query);
+// 	if ($row = mysql_fetch_array($res))
+// 	{
+// 		$g_rows = $row[0];
+// 	}
 	
-	if ($page <= 0)
-		$r_start = 0;
-	else
-		$r_start = ($page-1)*PAGE_NUM;
+// 	if ($page <= 0)
+// 		$r_start = 0;
+// 	else
+// 		$r_start = ($page-1)*PAGE_NUM;
 	
-	$query = "SELECT * FROM tuanduilist where status<>2 ORDER BY input_time DESC LIMIT ".$r_start.", ".PAGE_NUM;
-	$tuanduilist = getAll($query);
-}
+// 	$query = "SELECT * FROM tuanduilist where status<>2 ORDER BY input_time DESC LIMIT ".$r_start.", ".PAGE_NUM;
+// 	$tuanduilist = getAll($query);
+// }
 
 
 ?>

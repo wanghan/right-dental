@@ -1,24 +1,24 @@
 ﻿<?php
 require ("./inc/head.php");
 
-define ("PAGE_NUM", 6);
-$page = $_REQUEST['page'];
+// define ("PAGE_NUM", 6);
+// $page = $_REQUEST['page'];
 
-//分页列表部分
-$query = "SELECT COUNT(*) FROM shebeilist where status<>2 ";
-$res = mysql_query($query, $g_mysql) or syswarn("对不起","系统错误，请联系管理员",mysql_error().":".$query);
-if ($row = mysql_fetch_array($res))
-{
-	$g_rows = $row[0];
-}
+// //分页列表部分
+// $query = "SELECT COUNT(*) FROM shebeilist where status<>2 ";
+// $res = mysql_query($query, $g_mysql) or syswarn("对不起","系统错误，请联系管理员",mysql_error().":".$query);
+// if ($row = mysql_fetch_array($res))
+// {
+// 	$g_rows = $row[0];
+// }
 
-if ($page <= 0)
-	$r_start = 0;
-else
-	$r_start = ($page-1)*PAGE_NUM;
+// if ($page <= 0)
+// 	$r_start = 0;
+// else
+// 	$r_start = ($page-1)*PAGE_NUM;
 
-$query = "SELECT * FROM shebeilist where status<>2 ORDER BY input_time DESC LIMIT ".$r_start.", ".PAGE_NUM;
-$shebeilist = getAll($query);
+// $query = "SELECT * FROM shebeilist where status<>2 ORDER BY input_time DESC LIMIT ".$r_start.", ".PAGE_NUM;
+// $shebeilist = getAll($query);
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

@@ -1,27 +1,27 @@
 ﻿<?php
 require ("./inc/head.php");
 
-$zhonglei_id = $_REQUEST['zhongleiid'];
+// $zhonglei_id = $_REQUEST['zhongleiid'];
 
 
-$query = "SELECT * FROM fuwuzhonglei where id=$zhonglei_id ";
-$fuwuzhongleilist = getAll($query);
-$fuwuzhonglei = $fuwuzhongleilist[0][title];
-$img = $fuwuzhongleilist[0][img];
-$content = $fuwuzhongleilist[0][content];
+// $query = "SELECT * FROM fuwuzhonglei where id=$zhonglei_id ";
+// $fuwuzhongleilist = getAll($query);
+// $fuwuzhonglei = $fuwuzhongleilist[0][title];
+// $img = $fuwuzhongleilist[0][img];
+// $content = $fuwuzhongleilist[0][content];
 
 
-$sql = "select * from fuwulist where zhongleiid=$zhonglei_id and status<>2";
-$fuwulist = getAll($sql);
+// $sql = "select * from fuwulist where zhongleiid=$zhonglei_id and status<>2";
+// $fuwulist = getAll($sql);
 
 
-$detailid = $_REQUEST['detailid'];
-if($detailid!=""){
+// $detailid = $_REQUEST['detailid'];
+// if($detailid!=""){
 
-	$detailquery = "SELECT * FROM fuwulist where id=$detailid";
-	$detaillist = getAll($detailquery);
+// 	$detailquery = "SELECT * FROM fuwulist where id=$detailid";
+// 	$detaillist = getAll($detailquery);
 
-}
+// }
 
 
 

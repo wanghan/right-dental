@@ -1,68 +1,69 @@
 ﻿<?php
 require ("./inc/head.php");
-session_start();
 
-if(isset($_SESSION["card_info"])){
+// session_start();
 
-	header( "location: logon.php" );
-	exit;
-}
-$act = $_REQUEST['act'];
-$login_id = $_REQUEST['login_id'];
-$login_pwd = $_REQUEST['login_pwd'];
+// if(isset($_SESSION["card_info"])){
 
-if($act=="login"){
+// 	header( "location: logon.php" );
+// 	exit;
+// }
+// $act = $_REQUEST['act'];
+// $login_id = $_REQUEST['login_id'];
+// $login_pwd = $_REQUEST['login_pwd'];
 
-	$query="select * from card where username='$login_id'";
-	$result = mysql_query($query,$g_mysql) or syswarn("myswl err", mysql_error(), $query);
-	$row = mysql_fetch_array($result);
-	if($row['username']=='') {
-		alert_location("卡号不正确!","club.php");
-	} else {
-		$query="select * from card where username='$login_id' and password='$login_pwd' and status=1";
-		$result = mysql_query($query,$g_mysql);
-		$row = mysql_fetch_array($result);
+// if($act=="login"){
+
+// 	$query="select * from card where username='$login_id'";
+// 	$result = mysql_query($query,$g_mysql) or syswarn("myswl err", mysql_error(), $query);
+// 	$row = mysql_fetch_array($result);
+// 	if($row['username']=='') {
+// 		alert_location("卡号不正确!","club.php");
+// 	} else {
+// 		$query="select * from card where username='$login_id' and password='$login_pwd' and status=1";
+// 		$result = mysql_query($query,$g_mysql);
+// 		$row = mysql_fetch_array($result);
 		
-		//密码错误
-		if($row['username']=='') {
-			alert_location("密码不正确!","club.php");
-		} else {
+// 		//密码错误
+// 		if($row['username']=='') {
+// 			alert_location("密码不正确!","club.php");
+// 		} else {
 				
-			//登录成功
-			$userinfo["ip"] = $_SERVER["REMOTE_ADDR"];
-			$userinfo["id"] = $row[id];
-			$userinfo["user_name"] = $row["username"];
+// 			//登录成功
+// 			$userinfo["ip"] = $_SERVER["REMOTE_ADDR"];
+// 			$userinfo["id"] = $row[id];
+// 			$userinfo["user_name"] = $row["username"];
 			
-			logininfo_update($userinfo);
+// 			logininfo_update($userinfo);
 
-			$_SESSION["card_info"] = $row;
+// 			$_SESSION["card_info"] = $row;
 						
-			alert_location("成功登陆!","logon.php");
-		}
-	}
+// 			alert_location("成功登陆!","logon.php");
+// 		}
+// 	}
 
-}
+// }
 
-$query = "SELECT * FROM huodong where status<>2 ORDER BY input_time DESC ";
-$huodonglist = getAll($query);
+// $query = "SELECT * FROM huodong where status<>2 ORDER BY input_time DESC ";
+// $huodonglist = getAll($query);
 
-$query = "SELECT * FROM huiyuaninfo where id=1";
-$fuwulist = getAll($query);
+// $query = "SELECT * FROM huiyuaninfo where id=1";
+// $fuwulist = getAll($query);
 
-$query = "SELECT * FROM huiyuaninfo where id=2";
-$tiaojianlist = getAll($query);
+// $query = "SELECT * FROM huiyuaninfo where id=2";
+// $tiaojianlist = getAll($query);
 
-function logininfo_update($userinfo) {
+// function logininfo_update($userinfo) {
 	
-	global $g_mysql;
-	global $g_smysql;
+// 	global $g_mysql;
+// 	global $g_smysql;
 	
-	$update_user_sql = "update card set last_time=now(), 
-	                                    login_num = login_num + 1 
-	                    where id = " . $userinfo["id"];
-	mysql_query($update_user_sql,$g_mysql) or syswarn("错误","数据库更新错误!",mysql_error().":$update_user_sql");
+// 	$update_user_sql = "update card set last_time=now(), 
+// 	                                    login_num = login_num + 1 
+// 	                    where id = " . $userinfo["id"];
+// 	mysql_query($update_user_sql,$g_mysql) or syswarn("错误","数据库更新错误!",mysql_error().":$update_user_sql");
 	
-}
+// }
 
 
 ?>

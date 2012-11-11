@@ -1,56 +1,56 @@
 ﻿<?php
 require ("./inc/head.php");
 
-$act=$_REQUEST[act];
+// $act=$_REQUEST[act];
 
-if($act=='add')
-{
-	$cardnum=$_REQUEST[cardnum];
-	$name=$_REQUEST[name];
-	$sex=$_REQUEST[sex];	
-	$email=$_REQUEST[email];
-	$tel=$_REQUEST[tel];
-	$year=$_REQUEST[year];
-	$month=$_REQUEST[month];
-	$day=$_REQUEST[day];
-	$birthday = $year."-".$month."-".$day;
-	$hunyin = $_REQUEST['hunyin'];
-	$add=$_REQUEST[add];
-	$xueli=$_REQUEST[xueli];
-	$school=$_REQUEST[school];
-	$zhuanye=$_REQUEST[zhuanye];
-	$job=$_REQUEST[job];
-	$info=$_REQUEST[info];
+// if($act=='add')
+// {
+// 	$cardnum=$_REQUEST[cardnum];
+// 	$name=$_REQUEST[name];
+// 	$sex=$_REQUEST[sex];	
+// 	$email=$_REQUEST[email];
+// 	$tel=$_REQUEST[tel];
+// 	$year=$_REQUEST[year];
+// 	$month=$_REQUEST[month];
+// 	$day=$_REQUEST[day];
+// 	$birthday = $year."-".$month."-".$day;
+// 	$hunyin = $_REQUEST['hunyin'];
+// 	$add=$_REQUEST[add];
+// 	$xueli=$_REQUEST[xueli];
+// 	$school=$_REQUEST[school];
+// 	$zhuanye=$_REQUEST[zhuanye];
+// 	$job=$_REQUEST[job];
+// 	$info=$_REQUEST[info];
 
-	$cardid = "0";
+// 	$cardid = "0";
 
-	$query="insert into jianli set ";
-	$query .= "cardnum = '" .mysql_escape_string($cardnum)."', ";
-	$query .= "name = '" .mysql_escape_string($name)."', ";
-	$query .= "sex = '" .mysql_escape_string($sex)."', ";
-	$query .= "birthday = '" .mysql_escape_string($birthday)."', ";
-	$query .= "hunyin = '" .mysql_escape_string($hunyin)."', ";
-	$query .= "`add` = '" .mysql_escape_string($add)."', ";
-	$query .= "xueli = '" .mysql_escape_string($xueli)."', ";
-	$query .= "school = '" .mysql_escape_string($school)."', ";
-	$query .= "email = '" .mysql_escape_string($email)."', ";
-	$query .= "tel = '" .mysql_escape_string($tel)."', ";
-	$query .= "zhuanye = '" .mysql_escape_string($zhuanye)."', ";
-	$query .= "job = '" .mysql_escape_string($job)."', ";
-	$query .= "info = '" .mysql_escape_string($info)."', ";
-	$query .= "status = '" .mysql_escape_string("1")."', ";
-	$query .= "input_time = now() ";
+// 	$query="insert into jianli set ";
+// 	$query .= "cardnum = '" .mysql_escape_string($cardnum)."', ";
+// 	$query .= "name = '" .mysql_escape_string($name)."', ";
+// 	$query .= "sex = '" .mysql_escape_string($sex)."', ";
+// 	$query .= "birthday = '" .mysql_escape_string($birthday)."', ";
+// 	$query .= "hunyin = '" .mysql_escape_string($hunyin)."', ";
+// 	$query .= "`add` = '" .mysql_escape_string($add)."', ";
+// 	$query .= "xueli = '" .mysql_escape_string($xueli)."', ";
+// 	$query .= "school = '" .mysql_escape_string($school)."', ";
+// 	$query .= "email = '" .mysql_escape_string($email)."', ";
+// 	$query .= "tel = '" .mysql_escape_string($tel)."', ";
+// 	$query .= "zhuanye = '" .mysql_escape_string($zhuanye)."', ";
+// 	$query .= "job = '" .mysql_escape_string($job)."', ";
+// 	$query .= "info = '" .mysql_escape_string($info)."', ";
+// 	$query .= "status = '" .mysql_escape_string("1")."', ";
+// 	$query .= "input_time = now() ";
 
-//echo $query;
-//exit;
-	$result = mysql_query($query,$g_mysql) or syswarn("对不起","系统错误，请联系管理员.",mysql_error().":$query");
-	alert_location("简历提交成功!","hr.php");
+// //echo $query;
+// //exit;
+// 	$result = mysql_query($query,$g_mysql) or syswarn("对不起","系统错误，请联系管理员.",mysql_error().":$query");
+// 	alert_location("简历提交成功!","hr.php");
 
-}
+// }
 
 
-$query = "SELECT * FROM job where status<>2 ORDER BY input_time DESC limit 0,6";
-$joblist = getAll($query);
+// $query = "SELECT * FROM job where status<>2 ORDER BY input_time DESC limit 0,6";
+// $joblist = getAll($query);
 
 
 ?>

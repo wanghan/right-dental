@@ -1,76 +1,76 @@
 ﻿<?php
 require ("./inc/head.php");
 
-$act=$_REQUEST[act];
-$tuanduiid = $_REQUEST['tuanduiid'];
+// $act=$_REQUEST[act];
+// $tuanduiid = $_REQUEST['tuanduiid'];
 
-if($act=='yuyue')
-{
+// if($act=='yuyue')
+// {
 	
-	$name=$_REQUEST[name];
-	$sex=$_REQUEST[sex];	
-	$email=$_REQUEST[email];
-	$tel=$_REQUEST[tel];
-	$year=$_REQUEST[year];
-	$month=$_REQUEST[month];
-	$day=$_REQUEST[day];
-	$time=$_REQUEST['time'];
-	$yuyuetime = $year."-".$month."-".$day." ".$time;
+// 	$name=$_REQUEST[name];
+// 	$sex=$_REQUEST[sex];	
+// 	$email=$_REQUEST[email];
+// 	$tel=$_REQUEST[tel];
+// 	$year=$_REQUEST[year];
+// 	$month=$_REQUEST[month];
+// 	$day=$_REQUEST[day];
+// 	$time=$_REQUEST['time'];
+// 	$yuyuetime = $year."-".$month."-".$day." ".$time;
 
-	if($tuanduiid==""){
-		$tuanduiid="0";
-	}
+// 	if($tuanduiid==""){
+// 		$tuanduiid="0";
+// 	}
 
-	$fuwuid=$_REQUEST[fuwuid];
-	//var_dump($fuwuid);
+// 	$fuwuid=$_REQUEST[fuwuid];
+// 	//var_dump($fuwuid);
 	
-	$fuwuidstr = implode(",", $fuwuid);
+// 	$fuwuidstr = implode(",", $fuwuid);
 	
-	$fuwuidstr = "," . $fuwuidstr . ",";
-	//echo $fuwuidstr;
-	//exit;
+// 	$fuwuidstr = "," . $fuwuidstr . ",";
+// 	//echo $fuwuidstr;
+// 	//exit;
 
-	$notice=$_REQUEST[notice];
+// 	$notice=$_REQUEST[notice];
 
-	$cardid = "0";
-
-
-	$yuyueday = date("Ymd",time()+60*60*24*2);
-	$theday = $year.$month.$day;
-	if($theday < $yuyueday){
-
-		alert_location("对不起！只能预约两天后的时间!","online.php");
-
-	}else{
-
-		$query="insert into yuyue set ";
-		$query .= "name = '" .mysql_escape_string($name)."', ";
-		$query .= "sex = '" .mysql_escape_string($sex)."', ";
-		$query .= "email = '" .mysql_escape_string($email)."', ";
-		$query .= "tel = '" .mysql_escape_string($tel)."', ";
-		$query .= "yuyue_time = '" .mysql_escape_string($yuyuetime)."', ";
-		$query .= "notice = '" .mysql_escape_string($notice)."', ";
-		$query .= "fuwuid = '" .mysql_escape_string($fuwuidstr)."', ";
-		$query .= "tuanduiid = '" .mysql_escape_string($tuanduiid)."', ";
-		$query .= "cardid = '" .mysql_escape_string($cardid)."', ";
-		$query .= "status = '" .mysql_escape_string("1")."', ";
-		$query .= "input_time = now() ";
+// 	$cardid = "0";
 
 
-		$result = mysql_query($query,$g_mysql) or syswarn("对不起","系统错误，请联系管理员.",mysql_error().":$query");
-		alert_location("预约成功!","online.php");
+// 	$yuyueday = date("Ymd",time()+60*60*24*2);
+// 	$theday = $year.$month.$day;
+// 	if($theday < $yuyueday){
 
-	}
+// 		alert_location("对不起！只能预约两天后的时间!","online.php");
 
-}
+// 	}else{
+
+// 		$query="insert into yuyue set ";
+// 		$query .= "name = '" .mysql_escape_string($name)."', ";
+// 		$query .= "sex = '" .mysql_escape_string($sex)."', ";
+// 		$query .= "email = '" .mysql_escape_string($email)."', ";
+// 		$query .= "tel = '" .mysql_escape_string($tel)."', ";
+// 		$query .= "yuyue_time = '" .mysql_escape_string($yuyuetime)."', ";
+// 		$query .= "notice = '" .mysql_escape_string($notice)."', ";
+// 		$query .= "fuwuid = '" .mysql_escape_string($fuwuidstr)."', ";
+// 		$query .= "tuanduiid = '" .mysql_escape_string($tuanduiid)."', ";
+// 		$query .= "cardid = '" .mysql_escape_string($cardid)."', ";
+// 		$query .= "status = '" .mysql_escape_string("1")."', ";
+// 		$query .= "input_time = now() ";
 
 
-//$query = "SELECT * FROM fuwulist where status<>2 ORDER BY input_time DESC";
-$query = "SELECT * FROM fuwuzhonglei where status<>2 ORDER BY input_time DESC";
-$fuwulist = getAll($query);
+// 		$result = mysql_query($query,$g_mysql) or syswarn("对不起","系统错误，请联系管理员.",mysql_error().":$query");
+// 		alert_location("预约成功!","online.php");
 
-$sql = "select * from tuanduilist where status<>2 ";
-$tuanduilist = getAll($sql);
+// 	}
+
+// }
+
+
+// //$query = "SELECT * FROM fuwulist where status<>2 ORDER BY input_time DESC";
+// $query = "SELECT * FROM fuwuzhonglei where status<>2 ORDER BY input_time DESC";
+// $fuwulist = getAll($query);
+
+// $sql = "select * from tuanduilist where status<>2 ";
+// $tuanduilist = getAll($sql);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
