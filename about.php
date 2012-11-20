@@ -41,7 +41,6 @@ body,td,th {
 	font-size: 12px;
 	color: #5c5650;
 }
-.STYLE0 {color: #ffa131}
 .frame01 {
 	border: 1px solid #bbbfb1;
 }

@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+body 
+{
+	background-color: #f2f3ed;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+body,td,th 
+{
+	font-size: 12px;
+	color: #5c5650;
+}
+
+a:hover 
+{ 
+	text-decoration: none;
+}  
+
+.expertListImg
+{
+	height: 200px;
+}
+
+.expertListDiv
+{
+	text-align: center;
+	font-size: 14;
+	font-weight: bold;
+}

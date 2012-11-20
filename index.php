@@ -1,5 +1,4 @@
 ﻿<?php
-
 require ("./inc/head.php");
 
 // define ("PAGE_NUM", 10);
