@@ -1,6 +1,6 @@
 <table align="center" width="100%" height="60" border="0" cellpadding="0" cellspacing="0" bgcolor="#f7f7f7">
 	<tr>
-      <td><table width="75%"  border="0" align="center" cellpadding="0" cellspacing="0">
+      <td><table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
         <tr align="left" valign="middle">
           <td width="479" height="49">
           	<div style="padding-left:57px; padding-top:0px">

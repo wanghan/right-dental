@@ -2,7 +2,9 @@
 	require_once("loadhead.php");
 ?>
 
-<?php MasterPage::BeginPlaceHolder(); ?>Greeting Form Demo<?php MasterPage::EndPlaceHolder("title"); ?>
+<?php MasterPage::BeginPlaceHolder(); ?>
+瑞特口腔-专家团队
+<?php MasterPage::EndPlaceHolder("title"); ?>
 
 <?php MasterPage::BeginPlaceHolder(); ?>
 <img src="images/right_01.jpg" width="220" height="48" alt="" />
@@ -36,7 +38,7 @@
 						<tr>
 							<td>
 							<div class="expertListDiv">
-							<a href="expert/doctor_zhu.php">
+							<a href="doctor_zhu.php">
 								<img class="expertListImg" alt="朱凯军医生" src="images/team/zhukaijun.jpg"></img>
 								<br/>朱凯军医生
 							</a>
@@ -44,7 +46,7 @@
 							</td>
 							<td>
 							<div class="expertListDiv">
-							<a href="expert/doctor_zhu.php">
+							<a href="doctor_2.php">
 								<img class="expertListImg" alt="曲卫红医生" src="images/team/quweihong.jpg" />
 								<br/>曲卫红医生
 							</a>
@@ -54,7 +56,7 @@
 						<tr>
 							<td>
 							<div class="expertListDiv">
-							<a href="expert/doctor_zhu.php">
+							<a href="doctor_3.php">
 								<img class="expertListImg" alt="董权医生" src="images/team/dongquan.jpg" />
 								<br/>董权医生
 							</a>
@@ -62,7 +64,7 @@
 							</td>
 							<td>
 							<div class="expertListDiv">
-							<a href="expert/doctor_zhu.php">
+							<a href="doctor_5.php">
 								<img class="expertListImg" alt="赵宏伟医生" src="images/team/zhaohongwei.png" />
 								<br/>赵宏伟医生
 							</a>
@@ -72,7 +74,7 @@
 						<tr>
 							<td colspan="2">
 							<div class="expertListDiv">
-							<a href="expert/doctor_zhu.php">
+							<a href="doctor_4.php">
 								<img class="expertListImg" alt="万鹏医生" src="images/team/wanpeng.png" />
 								<br/>万鹏医生
 							</a>
