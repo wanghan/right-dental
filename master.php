@@ -9,10 +9,14 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title><?php echo MasterPage::GetPlaceHolder("title"); ?></title>
 	<link rel="stylesheet" href="style/main.css" type="text/css" />
+	<link href="style/bootstrap.css" rel="stylesheet" />
+        <link href="style/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="style/lightbox.css" rel="stylesheet" />
+        <link href="style/screen.css" rel="stylesheet" />
 </head>
 <body>
 	<div align="center" style="margin: 0px auto; width: 1004px">
-		<table width="1004" border="0" cellspacing="0" cellpadding="0">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="220" valign="top">
 				<table id="Table_01" width="220" height="689" border="0" cellpadding="0" cellspacing="0">
@@ -49,5 +53,18 @@
 		</table>
   		<?php require 'footer.php';?>
   </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 </html>
