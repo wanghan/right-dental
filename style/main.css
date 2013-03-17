@@ -11,7 +11,7 @@ body
 
 body,td,th 
 {
-	font-size: 12px;
+	font-size: 14px;
 	color: #5c5650;
 }
 
@@ -19,6 +19,11 @@ a:hover
 { 
 	text-decoration: none;
 }  
+
+p
+{
+    font-size:14px;
+}
 
 .expertListImg
 {
