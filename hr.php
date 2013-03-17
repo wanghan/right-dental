@@ -59,7 +59,7 @@ require ("./inc/head.php");
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <LINK HREF="images/style.css" TYPE="text/css" REL="stylesheet">
-<title>瑞特口腔-瑞特新闻</title>
+<title>瑞特口腔-简历投递</title>
 <style type="text/css">
 <!--
 body {

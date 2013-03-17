@@ -31,3 +31,9 @@ a:hover
 	font-size: 14;
 	font-weight: bold;
 }
+
+.floatRightImage
+{
+    float:right;
+    margin-right: 10px;
+}
