@@ -13,6 +13,7 @@
         <link href="style/bootstrap-responsive.css" rel="stylesheet" />
         <link href="style/lightbox.css" rel="stylesheet" />
         <link href="style/screen.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="style/jquery.ad-gallery.css">
 </head>
 <body>
 	<div align="center" style="margin: 0px auto; width: 1004px">
@@ -66,5 +67,7 @@
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>
     <script src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/jquery.ad-gallery.js"></script>
+    <script type="text/javascript" src="js/adgallary-setup.js"></script>
 </body>
 </html>
