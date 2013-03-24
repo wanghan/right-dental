@@ -59,7 +59,8 @@ body,td,th {
                   </table></td>
                   </tr>
                 <tr>
-                  <td valign="top" bgcolor="#dee0d5"><table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <td valign="top" bgcolor="#dee0d5">
+                   <table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
                       <td><a href="device_a.php"><img src="images/s01.jpg" width="700" height="200" border="0"/></a></td>
                     </tr>

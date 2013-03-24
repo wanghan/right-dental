@@ -8,7 +8,7 @@
           		<a href="index.php" class="style2">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           		<a href="about.php" class="style2">关于瑞特</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           		<a href="service.php" class="style2">服务项目</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          		<a href="hr.php" class="style2">人才招聘</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          		<a href="hiring.php" class="style2">诚聘英才</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           		<a href="contact.php" class="style2">联系我们</a></span></div></td>
           <td width="190" class="style1">
           	<span class="style2">&copy; 2008</span>&nbsp;瑞特口腔&nbsp;|&nbsp;&nbsp;<a href="mianze.php" class="style2">免责条款</a></td>
